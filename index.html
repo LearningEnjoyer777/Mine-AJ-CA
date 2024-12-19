@@ -1,91 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amir J's Minesweeper </title>
-    <style>
-        body {
-            margin: 0; /* Remove default margins */
-            padding: 0; /* Remove default padding */
-            height: 100vh; /* Set the height to fill the viewport */
-            background-image: url('Naval-mines-1.webp'); /* Replace with your image path */
-            background-size: cover; /* Makes the image cover the entire screen */
-            background-repeat: no-repeat; /* Prevents the image from repeating */
-            background-position: center; 
-        }
-        header {
-            background: #333;
-            color: #fff;
-            padding: 10px 20px;
-            text-align: center;
-        }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            background: #444;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-            padding: 10px 15px;
-            display: block;
-        }
-        nav ul li a:hover {
-            background: #555;
-        }
-        main {
-            padding: 20px;
-            text-align: center;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" type="module"></script>
+  <script src="minesweeper.js" type="module"></script>
+  <title>AJ's Minesweeper</title>
 </head>
 <body>
-
-<header>
-    <h1>Welcome to My Website</h1>
-</header>
-
-<nav>
-    <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-    </ul>
-</nav>
-
-<main>
-    <section id="home">
-        <h2>Home</h2>
-        <p>This is the home section of the website.</p>
-    </section>
-    <section id="about">
-        <h2>About</h2>
-        <p>This is the about section of the website.</p>
-    </section>
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>This is the contact section of the website.</p>
-    
-
-    </section>
-</main>
-
-
+  <h3 class="title">Wannabe Minesweeper</h3>
+  <div class="subtext">
+ Mines Left: <span data-mine-count></span>
+  </div>
+  <div class="controls">
+  <label for="difficulty">Select Difficulty:</label>
+  <select id="difficulty">
+  <option value="easy">Easy</option>
+  <option value="normal">Normal</option>
+  <option value="hard">Hard</option>
+  <option value="custom">Custom</option>
+  </select>
+  <button id="new-game" style="display: none;">New Game</button>
+  </div>
+  <div class="board"></div>
 </body>
 </html>
